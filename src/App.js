@@ -1,9 +1,14 @@
 import { useState } from 'react'
 import List from './components/List'
-// import Button from './components/Button'
 
-export default function App(props) {
+export default function App() {
   const [showList, setShowList] = useState(true)
+  useEffect(() => {
+    async function setUserResponse() {
+      await localStorage.setItem('user', JSON.stringify({}))
+    }
+    setUserResponse()
+  }, [])
 
   return <>{showList && <List />}</>
 }
