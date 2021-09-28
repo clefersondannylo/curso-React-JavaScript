@@ -17,13 +17,6 @@ export default function App() {
     setUserData(data)
   }
 
-  // const [showList, setShowList] = useState(true)
-  // useEffect(() => {
-  //   async function setUserResponse() {
-  //     await localStorage.setItem('user', JSON.stringify({}))
-  //   }
-  //   setUserResponse()
-  // }, [])
 
   return (
     <>
@@ -38,11 +31,18 @@ export default function App() {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          flexDirection: 'column'
+          flexDirection: 'column',
+          border:'2px solid #0085ff',
+          padding:'1rem',
+          margin:'1rem',
+          backgroundColor:'#223333',
+          borderRadius:8
         }}
       >
-        <div>{userData.name}</div>
-        <div>{userData.bio}</div>
+        <div style={{border:'2px solid #0085ff',padding:'1rem',marginBottom:10,color:"#fff",
+          borderRadius:8}}>{userData.name}</div>
+        <div style={{border:'2px solid #0085ff',padding:'1rem',color:"#fff",
+          borderRadius:8}}>{userData.bio}</div>
       </div>
     </>
   )
